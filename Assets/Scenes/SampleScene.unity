@@ -510,5 +510,40 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: PlayMusic.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: sounds.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: sounds.Array.data[2]._Name
+      value: arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: sounds.Array.data[2]._Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 188e7c18ff384324c8ee9949873c343c, type: 3}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: sounds.Array.data[2]._Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: sounds.Array.data[2]._Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: PlayMusic.Array.data[0]
+      value: arrow
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abf172ae6a15cb6499a0e01b3ea59565, type: 3}

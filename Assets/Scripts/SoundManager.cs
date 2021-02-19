@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
@@ -27,7 +28,6 @@ public class SoundManager : MonoBehaviour
             s.source.clip = s._Clip;
             s.source.volume = s._Volume;
             s.source.pitch = s._Pitch;
-            s.source.loop = s._Loop;
         }
     }
 
@@ -48,4 +48,19 @@ public class SoundManager : MonoBehaviour
         }
         s.source.Play();
     }
+
+    //IEnumerator PlaySound(string name)
+    //{
+    //    while (true)
+    //    {
+    //        yield return new WaitForSeconds(UnityEngine.Random.Range(5, 10));
+    //        Sound s = Array.Find(sounds, sound => sound._Name == name);
+    //        if (s == null)
+    //        {
+    //            break;
+    //        }
+    //        s.source.Play();
+    //    }
+    //}
+
 }

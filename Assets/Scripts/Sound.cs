@@ -12,8 +12,6 @@ public class Sound
     [Range(0.1f, 3.0f)]
     public float _Pitch;
 
-    public bool _Loop;
-
     [HideInInspector]
     public AudioSource source;
 }

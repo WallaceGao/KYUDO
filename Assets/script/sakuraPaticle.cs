@@ -20,12 +20,12 @@ public class sakuraPaticle : MonoBehaviour
         if (_isFoucs)
         {
             var main = _sakura.main;
-            main.simulationSpeed = _maxSpeed;
+            main.simulationSpeed = _foucsSpeed;
         }
         else
         {
             var main = _sakura.main;
-            main.simulationSpeed = _foucsSpeed;
+            main.simulationSpeed = _maxSpeed;
         }
     }
 }

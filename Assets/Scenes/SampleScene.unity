@@ -164,19 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88f3620d189329140b00b372014e199f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AppData: {fileID: 0}
-  m_AssetLookup: {fileID: 0}
-  m_RootGameObjects: []
-  m_FadeIn:
-    m_Color: {r: 0, g: 0, b: 0, a: 1}
-    m_Duration: 2
-  m_FadeOut:
-    m_Color: {r: 0, g: 0, b: 0, a: 1}
-    m_Duration: 2
-  LimappConfig:
-    SavedProfile: {fileID: 0}
-    ProfileToApply: {fileID: 0}
-    OverrideProfile: 0
 --- !u!4 &50463720
 Transform:
   m_ObjectHideFlags: 0
@@ -680,5 +667,53 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2951669906283611261, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951669906283611263, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951669906283611263, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951669906283611263, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1a2c2982a1a26e48bcb46d56c189807, type: 3}
+--- !u!1 &2951669906288494833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2951669906069611540, guid: a1a2c2982a1a26e48bcb46d56c189807,
+    type: 3}
+  m_PrefabInstance: {fileID: 2951669906288494832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &2951669906288494834 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2951669906283611263, guid: a1a2c2982a1a26e48bcb46d56c189807,
+    type: 3}
+  m_PrefabInstance: {fileID: 2951669906288494832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2951669906288494835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2951669906288494833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c03f98faccf8743aa21ab620e4960d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sakura: {fileID: 2951669906288494834}
+  _maxSpeed: 0.3
+  _foucsSpeed: 0.1
+  _isFoucs: 0

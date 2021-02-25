@@ -522,6 +522,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
         type: 3}
+      propertyPath: _sounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _playMusic.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
       propertyPath: sounds.Array.data[2]._Name
       value: arrow
       objectReference: {fileID: 0}
@@ -544,6 +554,61 @@ PrefabInstance:
         type: 3}
       propertyPath: PlayMusic.Array.data[0]
       value: arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _sounds.Array.data[0]._Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 188e7c18ff384324c8ee9949873c343c, type: 3}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _sounds.Array.data[0]._Name
+      value: arrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _playMusic.Array.data[0]
+      value: wind
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _sounds.Array.data[0]._Volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _sounds.Array.data[0]._Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _sounds.Array.data[1]._Name
+      value: wind
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _sounds.Array.data[1]._Clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 16b30890556253641a194dceaf742a9f, type: 3}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _sounds.Array.data[1]._Volume
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _sounds.Array.data[1]._Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _speedOfChangeFocus
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2896671723179288404, guid: abf172ae6a15cb6499a0e01b3ea59565,
+        type: 3}
+      propertyPath: _isFocus
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: abf172ae6a15cb6499a0e01b3ea59565, type: 3}

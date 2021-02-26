@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Liminal.SDK.VR;
+using Liminal.SDK.VR.Input;
 [RequireComponent(typeof(AudioSource))]
 public class StandardizedBow : MonoBehaviour
 {
@@ -321,8 +323,9 @@ public class StandardizedBow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         // STATE 1 - Pulling the string - Default Trigger is left mouse click
-        if (Input.GetKey(KeyCode.Mouse0))
+        if (VRDevice.Device.PrimaryInputDevice.GetButton(VRButton.Trigger))
         {
             // STATE 2 - The moment you just pulled the string
             if (justPulledString)
@@ -354,7 +357,7 @@ public class StandardizedBow : MonoBehaviour
         else
         {
             // STATE 3 - Just released the string - Default Trigger is left mouse click up
-            if (Input.GetKeyUp(KeyCode.Mouse0))
+            if (VRDevice.Device.PrimaryInputDevice.GetButtonUp(VRButton.Trigger))
             {
                 currentTime = 0;
                 stringLastPos = bowStringPoint.position;

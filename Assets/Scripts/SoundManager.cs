@@ -5,12 +5,12 @@ using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
-    public Sound[] _sounds;
-    public string[] _playMusic;
-    public string[] _playMusicLoop;
-    public static SoundManager _instance;
-    public bool _isFocus = false;
-    public float _speedOfChangeFocus = 0.0f;
+    [SerializeField] private Sound[] _sounds;
+    [SerializeField] private string[] _playMusic;
+    [SerializeField] private string[] _playMusicLoop;
+    [SerializeField] private static SoundManager _instance;
+    [SerializeField] private bool _isFocus = false;
+    [SerializeField] private float _speedOfChangeFocus = 0.0f;
 
     private void Awake()
     {

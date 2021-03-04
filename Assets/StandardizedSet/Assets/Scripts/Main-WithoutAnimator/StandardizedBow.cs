@@ -125,6 +125,9 @@ public class StandardizedBow : MonoBehaviour
     public bool stressEffectOnSound=false;
     #endregion
 
+    [SerializeField]
+    GameObject ArrowOnTarget;
+
     //*****************************************************************************************************************************
     
     // Start is called before the first frame update
@@ -371,6 +374,7 @@ public class StandardizedBow : MonoBehaviour
                 justLeftString = true;
                 ShootProjectile(currentStressOnString); // Shoot the projectile
                 //
+                ArrowOnTarget.SetActive(true);
                 if (stressEffectOnSound)
                 {
                     audioSource.pitch = audioSource.pitch / 2 + (currentStressOnString / maxStringStrength) * audioSource.pitch / 2;

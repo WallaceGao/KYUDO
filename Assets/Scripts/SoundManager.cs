@@ -5,15 +5,18 @@ using System.Collections;
 
 public class SoundManager : MonoBehaviour
 {
-    public Sound[] sounds;
-    public string[] PlayMusic;
-    public static SoundManager instance;
+    [SerializeField] private Sound[] _sounds;
+    [SerializeField] private string[] _playMusic;
+    [SerializeField] private string[] _playMusicLoop;
+    [SerializeField] private static SoundManager _instance;
+    [SerializeField] private bool _isFocus = false;
+    [SerializeField] private float _speedOfChangeFocus = 0.0f;
 
     private void Awake()
     {
-        if (instance == null)
+        if (_instance == null)
         {
-            instance = this;
+            _instance = this;
         }
         else
         {
@@ -22,7 +25,7 @@ public class SoundManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        foreach (Sound s in sounds)
+        foreach (Sound s in _sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s._Clip;
@@ -33,15 +36,27 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
-        foreach (var name in PlayMusic)
+        foreach (var name in _playMusic)
         {
             Play(name);
+        }
+        foreach (var name in _playMusicLoop)
+        {
+            StartCoroutine(PlayLoop(name));
+        }
+    }
+
+    public void Update()
+    {
+        foreach (var name in _playMusic)
+        {
+            focus(_isFocus,name);
         }
     }
 
     public void Play(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound._Name == name);
+        Sound s = Array.Find(_sounds, sound => sound._Name == name);
         if (s == null)
         {
             return;
@@ -49,18 +64,48 @@ public class SoundManager : MonoBehaviour
         s.source.Play();
     }
 
+<<<<<<< HEAD
     IEnumerator PlaySound(string name)
     {
         while (true)
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(5, 10));
             Sound s = Array.Find(sounds, sound => sound._Name == name);
+=======
+    IEnumerator PlayLoop(string name)
+    {
+        while (true)
+        {
+            Sound s = Array.Find(_sounds, sound => sound._Name == name);
+>>>>>>> Development
             if (s == null)
             {
                 break;
             }
+<<<<<<< HEAD
+=======
+
+            yield return new WaitUntil(() => s.source.isPlaying == false);
+            yield return new WaitForSeconds(UnityEngine.Random.Range(5, 10));
+>>>>>>> Development
             s.source.Play();
         }
     }
 
+    private void focus(bool isFocus,string name)
+    {
+        Sound s = Array.Find(_sounds, sound => sound._Name == name);
+        if (s == null)
+        {
+            return;
+        }
+        if (isFocus && s.source.volume >= s._Volume / 2)
+        {
+            s.source.volume -= _speedOfChangeFocus;
+        }
+        else if (!isFocus && s.source.volume <= s._Volume)
+        {
+            s.source.volume += _speedOfChangeFocus;
+        }
+    }
 }

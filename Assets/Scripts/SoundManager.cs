@@ -64,30 +64,18 @@ public class SoundManager : MonoBehaviour
         s.source.Play();
     }
 
-<<<<<<< HEAD
-    IEnumerator PlaySound(string name)
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(UnityEngine.Random.Range(5, 10));
-            Sound s = Array.Find(sounds, sound => sound._Name == name);
-=======
     IEnumerator PlayLoop(string name)
     {
         while (true)
         {
             Sound s = Array.Find(_sounds, sound => sound._Name == name);
->>>>>>> Development
             if (s == null)
             {
                 break;
             }
-<<<<<<< HEAD
-=======
 
             yield return new WaitUntil(() => s.source.isPlaying == false);
             yield return new WaitForSeconds(UnityEngine.Random.Range(5, 10));
->>>>>>> Development
             s.source.Play();
         }
     }

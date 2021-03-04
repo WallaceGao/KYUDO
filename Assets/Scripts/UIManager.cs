@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-    public UI[] text;
-    public Text _texts;
-    public float _waitTime;
-    public float _fadeTime;
+    public UI[] _textsStar;
+    public UI[] _textsInLoop;
+    public UI[] _TextsEnd;
+    private int _gameLoop;
 
     private void Awake()
     {
@@ -27,49 +27,59 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        //foreach(UI t in text)
-        //{
-        //    t._texts.canvasRenderer.SetAlpha(0.0f);
-        //}
-        _texts.canvasRenderer.SetAlpha(0.0f);
+        _gameLoop = 2;
+        foreach(UI t in _texts)
+        {
+            t._isShow = false;
+        }
+        foreach (UI t in _textsInLoop)
+        {
+            t._isShow = false;
+        }
     }
 
     private void Update()
     {
-        //for (int i = 0; i < text.Length; ++i)
-        //{
-        //    StartCoroutine(FadeTextToFullAlpha(text[i]._fadeTime, text[i]._texts));
-        //    StartCoroutine(WaitTime(text[i]._waitTime));
-        //    StartCoroutine(FadeTextToZeroAlpha(text[i]._fadeTime, text[i]._texts));
-        //}
-        //StartCoroutine(FadeTextToFullAlpha(_fadeTime, _texts));
-        //StartCoroutine(WaitTime(_waitTime));
-        //StartCoroutine(FadeTextToZeroAlpha(_fadeTime, _texts));
-        _texts.CrossFadeAlpha(1, 1, false);
-        StartCoroutine(WaitTime(_waitTime));
-        _texts.CrossFadeAlpha(0, 1, false);
-    }
-
-    private IEnumerator WaitTime(float time)
-    {
-        yield return new WaitForSeconds(time);
-    }
-
-    public IEnumerator FadeTextToFullAlpha(float t, Text i)
-    {
-        while (i.color.a < 1.0f)
+        
+        for (int i = 0; i < _gameLoop; ++i)
         {
-            i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a + (Time.deltaTime / t));
-            yield return null;
+            if (i == 0)
+            {
+        
+            }
+            else if (i == 1)
+            {
+        
+            }
+            else if (i == 2)
+            {
+        
+            }
         }
     }
 
-    public IEnumerator FadeTextToZeroAlpha(float t, Text i)
+
+    IEnumerable waitTime(float t)
     {
-        while (i.color.a > 0.0f)
-        {
-            i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
-            yield return null;
-        }
+        yield return new WaitForSeconds(t);
     }
+
+    //IEnumerator FadeIn()
+    //{
+    //    while (_texts.color.a < 1)
+    //    {
+    //        _texts.color = Color.Lerp(_texts.color, new Color(_texts.color.r, _texts.color.g, _texts.color.b,1.0f), _fadeTime * Time.deltaTime);
+    //        yield return null;
+    //    }
+    //}
+    //
+    //IEnumerator FadeOut()
+    //{
+    //    while (_texts.color.a > 0)
+    //    {
+    //        _texts.color = Color.Lerp(_texts.color, new Color(_texts.color.r, _texts.color.g, _texts.color.b, 0.0f), _fadeTime * Time.deltaTime);
+    //        yield return null;
+    //    }
+    //}
+
 }

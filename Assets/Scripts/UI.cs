@@ -6,7 +6,7 @@ using UnityEngine.UI;
 [System.Serializable]
 public class UI
 {
-    public Text _texts;
+    public GameObject _text;
     public float _waitTime;
-    public float _fadeTime;
+    public bool _isShow;
 }

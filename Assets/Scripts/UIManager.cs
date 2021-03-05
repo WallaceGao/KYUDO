@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-    public UI[] _textsStar;
     public UI[] _textsInLoop;
-    public UI[] _TextsEnd;
     private int _gameLoop;
+    private int _LoopIndex;
+
 
     private void Awake()
     {
@@ -27,41 +27,28 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        _gameLoop = 2;
-        foreach(UI t in _texts)
-        {
-            t._isShow = false;
-        }
-        foreach (UI t in _textsInLoop)
-        {
-            t._isShow = false;
-        }
+        _gameLoop = 3;
+        _LoopIndex = 0;
+        StartCoroutine(waitTime(_textsInLoop, _LoopIndex));
     }
 
     private void Update()
     {
-        
-        for (int i = 0; i < _gameLoop; ++i)
-        {
-            if (i == 0)
-            {
-        
-            }
-            else if (i == 1)
-            {
-        
-            }
-            else if (i == 2)
-            {
-        
-            }
-        }
+
+        //}
     }
 
 
-    IEnumerable waitTime(float t)
+    IEnumerator waitTime(UI[] t, int index )
     {
-        yield return new WaitForSeconds(t);
+        for (int i = 0; i < t.Length; ++i)
+        {
+            yield return new WaitForSeconds(t[i]._waitTime);
+            t[i]._text.SetActive(true);
+            yield return new WaitForSeconds(t[i]._showTime);
+            t[i]._text.SetActive(false);
+            _LoopIndex++;
+        }
     }
 
     //IEnumerator FadeIn()

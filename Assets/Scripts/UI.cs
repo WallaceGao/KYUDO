@@ -7,6 +7,6 @@ using UnityEngine.UI;
 public class UI
 {
     public GameObject _text;
+    public float _showTime;
     public float _waitTime;
-    public bool _isShow;
 }

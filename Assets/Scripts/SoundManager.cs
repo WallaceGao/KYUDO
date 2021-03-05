@@ -11,6 +11,8 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private static SoundManager _instance;
     [SerializeField] private bool _isFocus = false;
     [SerializeField] private float _speedOfChangeFocus = 0.0f;
+    [SerializeField] private float _randomStarTime = 0.0f;
+    [SerializeField] private float _randomEndTime = 0.0f;
 
     private void Awake()
     {
@@ -75,7 +77,7 @@ public class SoundManager : MonoBehaviour
             }
 
             yield return new WaitUntil(() => s.source.isPlaying == false);
-            yield return new WaitForSeconds(UnityEngine.Random.Range(5, 10));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(_randomStarTime, _randomEndTime));
             s.source.Play();
         }
     }

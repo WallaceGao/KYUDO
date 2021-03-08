@@ -372,7 +372,7 @@ public class StandardizedBow : MonoBehaviour
                 firstLastDownJointRot3 = bowDownJoint3.localEulerAngles;
                 justPulledString = true;
                 justLeftString = true;
-                ShootProjectile(currentStressOnString); // Shoot the projectile
+                //ShootProjectile(currentStressOnString); // Shoot the projectile
                 //
                 ArrowOnTarget.SetActive(true);
                 if (stressEffectOnSound)

@@ -10,9 +10,9 @@ public class SoundManager : MonoBehaviour
     [SerializeField] private string[] _playMusicLoop;
     [SerializeField] private static SoundManager _instance;
     [SerializeField] private bool _isFocus = false;
+    public bool IsFoucs { set { _isFocus = value; } }
     [SerializeField] private float _speedOfChangeFocus = 0.0f;
-    [SerializeField] private float _randomStarTime = 0.0f;
-    [SerializeField] private float _randomEndTime = 0.0f;
+
 
     private void Awake()
     {
@@ -50,7 +50,7 @@ public class SoundManager : MonoBehaviour
 
     public void Update()
     {
-        foreach (var name in _playMusic)
+        foreach (var name in _playMusicLoop)
         {
             focus(_isFocus,name);
         }
@@ -77,19 +77,19 @@ public class SoundManager : MonoBehaviour
             }
 
             yield return new WaitUntil(() => s.source.isPlaying == false);
-            yield return new WaitForSeconds(UnityEngine.Random.Range(_randomStarTime, _randomEndTime));
+            yield return new WaitForSeconds(UnityEngine.Random.Range(s._randomStarTime, s._randomEndTime));
             s.source.Play();
         }
     }
 
-    private void focus(bool isFocus,string name)
+    public void focus(bool isFocus,string name)
     {
         Sound s = Array.Find(_sounds, sound => sound._Name == name);
         if (s == null)
         {
             return;
         }
-        if (isFocus && s.source.volume >= s._Volume / 2)
+        if (isFocus && s.source.volume >= s._FoucsVolume)
         {
             s.source.volume -= _speedOfChangeFocus;
         }

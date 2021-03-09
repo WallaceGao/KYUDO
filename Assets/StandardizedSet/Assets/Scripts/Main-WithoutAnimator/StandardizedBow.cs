@@ -26,6 +26,8 @@ public class StandardizedBow : MonoBehaviour
     // Easing Constants
     private const float PI = Mathf.PI;
     private const float HALFPI = Mathf.PI / 2.0f;
+    private SoundManager soundManager = FindObjectOfType<SoundManager>();
+    private sakuraPaticle paticle = FindObjectOfType<sakuraPaticle>();
     #endregion
 
     #region Public Values
@@ -330,6 +332,8 @@ public class StandardizedBow : MonoBehaviour
         // STATE 1 - Pulling the string - Default Trigger is left mouse click
         if (VRDevice.Device.PrimaryInputDevice.GetButton(VRButton.Trigger))
         {
+            soundManager.IsFoucs = true;
+            paticle._isFoucs = true;
             // STATE 2 - The moment you just pulled the string
             if (justPulledString)
             {
@@ -372,7 +376,9 @@ public class StandardizedBow : MonoBehaviour
                 firstLastDownJointRot3 = bowDownJoint3.localEulerAngles;
                 justPulledString = true;
                 justLeftString = true;
-                ShootProjectile(currentStressOnString); // Shoot the projectile
+                soundManager.IsFoucs = false;
+                paticle._isFoucs = false;
+                //ShootProjectile(currentStressOnString); // Shoot the projectile
                 //
                 ArrowOnTarget.SetActive(true);
                 if (stressEffectOnSound)

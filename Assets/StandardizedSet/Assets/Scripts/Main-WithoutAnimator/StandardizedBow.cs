@@ -26,8 +26,8 @@ public class StandardizedBow : MonoBehaviour
     // Easing Constants
     private const float PI = Mathf.PI;
     private const float HALFPI = Mathf.PI / 2.0f;
-    private SoundManager soundManager = FindObjectOfType<SoundManager>();
-    private sakuraPaticle paticle = FindObjectOfType<sakuraPaticle>();
+    private SoundManager soundManager;
+    private sakuraPaticle paticle;
     #endregion
 
     #region Public Values
@@ -193,6 +193,9 @@ public class StandardizedBow : MonoBehaviour
         firstStartDownJointRot1 = bowDownJoint1.localEulerAngles;
         firstStartDownJointRot2 = bowDownJoint2.localEulerAngles;
         firstStartDownJointRot3 = bowDownJoint3.localEulerAngles;
+        //
+        soundManager = FindObjectOfType<SoundManager>();
+        paticle = FindObjectOfType<sakuraPaticle>();
         //--------------Axis switch for different models--------------------
         switch (joint1RotateDirectionAxis)
         {
@@ -378,8 +381,6 @@ public class StandardizedBow : MonoBehaviour
                 justLeftString = true;
                 soundManager.IsFoucs = false;
                 paticle._isFoucs = false;
-                //ShootProjectile(currentStressOnString); // Shoot the projectile
-                //
                 ArrowOnTarget.SetActive(true);
                 if (stressEffectOnSound)
                 {

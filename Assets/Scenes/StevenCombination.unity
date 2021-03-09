@@ -20179,7 +20179,7 @@ PrefabInstance:
     - target: {fileID: 2951669906069611541, guid: a1a2c2982a1a26e48bcb46d56c189807,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.35
+      value: -0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2951669906069611541, guid: a1a2c2982a1a26e48bcb46d56c189807,
         type: 3}
@@ -20189,7 +20189,7 @@ PrefabInstance:
     - target: {fileID: 2951669906069611541, guid: a1a2c2982a1a26e48bcb46d56c189807,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.79
+      value: 28.18
       objectReference: {fileID: 0}
     - target: {fileID: 2951669906069611541, guid: a1a2c2982a1a26e48bcb46d56c189807,
         type: 3}
@@ -20230,6 +20230,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951669906283611261, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951669906283611261, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122900941278779866, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: _maxSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5122900941278779866, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: _foucsSpeed
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951669906283611263, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: simulationSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951669906283611263, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: -0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951669906283611263, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2951669906283611263, guid: a1a2c2982a1a26e48bcb46d56c189807,
+        type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1a2c2982a1a26e48bcb46d56c189807, type: 3}

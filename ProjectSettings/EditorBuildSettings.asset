@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BowMechanicTest.unity
-    guid: 31e4d5b7423d8894f969c6676530dfb3
+    path: Assets/Scenes/JoeyPlaceAsset.unity
+    guid: bc9b8d38779cf4443a456d66d90daa00
   m_configObjects: {}

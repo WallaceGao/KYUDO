@@ -43,19 +43,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa17c278ad00ae84abeeb1b20c2ed14b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - _Name: birdSound
+  _sounds:
+  - _Name: bird
     _Clip: {fileID: 8300000, guid: f7b52ab526562064b9d4ea05988d6019, type: 3}
     _Volume: 0.6
-    _Pitch: 1
-    _Loop: 1
+    _FoucsVolume: 0.3
+    _Pitch: 1.6
+    _randomStarTime: 0
+    _randomEndTime: 3
     source: {fileID: 0}
   - _Name: river
     _Clip: {fileID: 8300000, guid: 16b30890556253641a194dceaf742a9f, type: 3}
-    _Volume: 0.1
-    _Pitch: 1
-    _Loop: 1
+    _Volume: 0.2
+    _FoucsVolume: 0.1
+    _Pitch: 1.6
+    _randomStarTime: 0
+    _randomEndTime: 0
     source: {fileID: 0}
-  PlayMusic:
-  - birdSound
+  _playMusic: []
+  _playMusicLoop:
+  - bird
   - river
+  _isFocus: 0
+  _speedOfChangeFocus: 0.05

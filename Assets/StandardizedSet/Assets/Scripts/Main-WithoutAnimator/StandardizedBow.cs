@@ -127,8 +127,10 @@ public class StandardizedBow : MonoBehaviour
     public bool stressEffectOnSound=false;
     #endregion
 
+    public bool canFire;
+
     [SerializeField]
-    GameObject ArrowOnTarget;
+    public GameObject ArrowOnTarget;
 
     //*****************************************************************************************************************************
     

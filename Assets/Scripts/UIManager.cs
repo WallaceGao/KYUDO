@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField]
+    StandardizedBow bow;
     public static UIManager instance;
     public UI[] _textsInLoop;
     private int _gameLoop;
     private int _LoopIndex;
-
+    private bool _canFire;
+    public bool canFire { get { return _canFire; } }
 
     private void Awake()
     {
@@ -43,11 +46,16 @@ public class UIManager : MonoBehaviour
     {
         for (int i = 0; i < t.Length; ++i)
         {
+           /* if(i==14 || i==25)
+            {
+                bow.canFire = true;
+            }*/
             yield return new WaitForSeconds(t[i]._waitTime);
             t[i]._text.SetActive(true);
             yield return new WaitForSeconds(t[i]._showTime);
             t[i]._text.SetActive(false);
             _LoopIndex++;
+
         }
     }
 

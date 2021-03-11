@@ -48,7 +48,7 @@ MonoBehaviour:
     _Clip: {fileID: 8300000, guid: f7b52ab526562064b9d4ea05988d6019, type: 3}
     _Volume: 0.6
     _FoucsVolume: 0.3
-    _Pitch: 1.6
+    _Pitch: 0.64
     _randomStarTime: 0
     _randomEndTime: 3
     source: {fileID: 0}

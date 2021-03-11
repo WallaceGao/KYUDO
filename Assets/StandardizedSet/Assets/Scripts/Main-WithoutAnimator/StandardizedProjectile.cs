@@ -250,7 +250,7 @@ public class StandardizedProjectile : MonoBehaviour
             fleshParticleTransform = fleshParticleInstance.transform;
             fleshParticleInstance.SetActive(false);
         }
-        if (projectileHitParticleStone != null)
+        if (projectileHitParticleWood != null)
         {
             woodParticleInstance = Instantiate<GameObject>(projectileHitParticleWood, transform);
             woodHitPS = woodParticleInstance.GetComponent<ParticleSystem>();

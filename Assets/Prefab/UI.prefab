@@ -871,8 +871,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "It may sound very daunting at first, but don\x19t worry. Just follow my
-    lead."
+  m_Text: Relax, and just follow my lead.
 --- !u!1 &6693246241460905465
 GameObject:
   m_ObjectHideFlags: 0

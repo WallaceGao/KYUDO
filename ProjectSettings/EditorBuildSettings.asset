@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/JoeyNewScene.unity
-    guid: 5f1477f69dbaa3d46ad9e329679fba67
+    path: Assets/Scenes/JoeyHookUpAdam.unity
+    guid: a2f5777a0345c9749aff2ffd93e7a046
   m_configObjects: {}

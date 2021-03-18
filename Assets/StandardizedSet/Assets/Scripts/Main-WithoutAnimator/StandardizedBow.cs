@@ -130,6 +130,7 @@ public class StandardizedBow : MonoBehaviour
     [SerializeField]
     GameObject ArrowOnTarget;
 
+    float arrowSpeed = 0.0f;
     //*****************************************************************************************************************************
     
     // Start is called before the first frame update
@@ -331,7 +332,13 @@ public class StandardizedBow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (lastProjectile.transform.position == ArrowOnTarget.transform.position)
+        {
+            arrowSpeed = 0.0f;
+            lastProjectile.SetActive(false);
+        }
+        lastProjectile.transform.position += Vector3.MoveTowards(lastProjectile.transform.position, ArrowOnTarget.transform.position, arrowSpeed * Time.deltaTime);
+
         // STATE 1 - Pulling the string - Default Trigger is left mouse click
         if (VRDevice.Device.PrimaryInputDevice.GetButton(VRButton.Trigger))
         {
@@ -369,7 +376,9 @@ public class StandardizedBow : MonoBehaviour
             // STATE 3 - Just released the string - Default Trigger is left mouse click up
             if (VRDevice.Device.PrimaryInputDevice.GetButtonUp(VRButton.Trigger))
             {
-                lastProjectile.transform.position = Vector3.MoveTowards(lastProjectile.transform.position, ArrowOnTarget.transform.position, 5.0f);
+                arrowSpeed = 10.0f;
+              
+           
                 currentTime = 0;
                 stringLastPos = bowStringPoint.position;
                 firstLastUpJointRot1 = bowUpJoint1.localEulerAngles;

@@ -369,6 +369,7 @@ public class StandardizedBow : MonoBehaviour
             // STATE 3 - Just released the string - Default Trigger is left mouse click up
             if (VRDevice.Device.PrimaryInputDevice.GetButtonUp(VRButton.Trigger))
             {
+                lastProjectile.transform.position = Vector3.MoveTowards(lastProjectile.transform.position, ArrowOnTarget.transform.position, 5.0f);
                 currentTime = 0;
                 stringLastPos = bowStringPoint.position;
                 firstLastUpJointRot1 = bowUpJoint1.localEulerAngles;
